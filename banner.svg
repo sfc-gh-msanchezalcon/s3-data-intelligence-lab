@@ -20,7 +20,7 @@
   <circle cx="1000" cy="280" r="3" fill="white" opacity="0.3"/>
   <circle cx="50" cy="150" r="3" fill="white" opacity="0.2"/>
   <circle cx="1150" cy="140" r="4" fill="white" opacity="0.25"/>
-  <text x="600" y="130" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">S3 Data Intelligence Lab</text>
-  <text x="600" y="185" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="white" text-anchor="middle" opacity="0.9">Cortex AI Functions • Search • Analyst • Agent</text>
-  <text x="600" y="250" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7DD3F0" text-anchor="middle">Snowflake Hands-On Lab</text>
+  <text x="600" y="130" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">AWS + Snowflake Hands-On Lab</text>
+  <text x="600" y="185" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="white" text-anchor="middle" opacity="0.9">S3 Data Intelligence with Cortex AI</text>
+  <text x="600" y="250" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7DD3F0" text-anchor="middle">Auto-Ingest • AI Functions • Search • Analyst • Agent</text>
 </svg>
