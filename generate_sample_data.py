@@ -5,8 +5,8 @@ import struct
 import wave
 import io
 
-s3 = boto3.client('s3', region_name='eu-central-1')
-bucket_name = 'snowflake-s3-intelligence-lab-msanchez'
+s3 = boto3.client('s3', region_name=os.environ.get('AWS_REGION', 'eu-central-1'))
+bucket_name = os.environ.get('S3_BUCKET_NAME', 'healthcare-ai-demo-CHANGE-ME')
 
 # --- PDF SAMPLES (simple text-based PDFs) ---
 pdf_documents = [

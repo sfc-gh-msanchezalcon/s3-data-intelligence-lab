@@ -211,7 +211,7 @@ DESCRIBE INTEGRATION HEALTHCARE_S3_INTEGRATION;
 ```
 
 > **IMPORTANT: Copy these two values from the output:**
-> - `STORAGE_AWS_IAM_USER_ARN` (e.g., `arn:aws:iam::970547364499:user/sk7w0000-s`)
+> - `STORAGE_AWS_IAM_USER_ARN` (e.g., `arn:aws:iam::123456789012:user/abcd0000-s`)
 > - `STORAGE_AWS_EXTERNAL_ID` (e.g., `QY71556_SFCRole=3_abc123...`)
 
 Now create the external stages:
@@ -339,7 +339,7 @@ SHOW PIPES IN SCHEMA RAW;
 ```
 
 > **Copy the `notification_channel` value** from any pipe row — this is the SQS queue ARN.
-> (e.g., `arn:aws:sqs:eu-central-1:970547364499:sf-snowpipe-AIDA...`)
+> (e.g., `arn:aws:sqs:eu-central-1:123456789012:sf-snowpipe-AIDA...`)
 
 ---
 
@@ -369,10 +369,10 @@ SHOW PIPES IN SCHEMA RAW;
 Run the Python script included in this repo:
 
 ```bash
-# Set your AWS credentials (from AWS SSO portal or aws configure)
+# Set your AWS credentials and bucket name
 export AWS_DEFAULT_REGION=eu-central-1
+export S3_BUCKET_NAME="healthcare-ai-demo-<your-initials>"
 
-# Edit the bucket_name variable in the script first!
 python generate_sample_data.py
 ```
 

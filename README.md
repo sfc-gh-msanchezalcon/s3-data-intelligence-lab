@@ -29,7 +29,7 @@ S3 Bucket (pdfs/, txt/, audio/)
 ## Prerequisites
 
 - Snowflake account with ACCOUNTADMIN role and Cortex AI functions enabled
-- AWS account with S3 access (SE-Sandbox or equivalent)
+- AWS account with S3 access
 - Cross-region inference enabled (`CORTEX_ENABLED_CROSS_REGION = 'ANY_REGION'`)
 - Python 3.10+ with `boto3` (for sample file generation)
 
