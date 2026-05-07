@@ -2,6 +2,9 @@
   05 - STORED PROCEDURE: PROCESS PDF FILES
   Healthcare AI Intelligence Pipeline
 
+  NOTE: If 'claude-3-5-sonnet' is unavailable in your region, replace it with
+        'mistral-large2' or 'llama3.3-70b' in the AI_COMPLETE call below.
+
   Processes unprocessed PDF files from RAW.FILES_LOG using 9 AI functions:
     1. AI_PARSE_DOCUMENT (OCR mode)  — extract raw text from PDF
     2. AI_PARSE_DOCUMENT (LAYOUT)    — structured layout extraction

@@ -2,6 +2,9 @@
   06 - STORED PROCEDURE: PROCESS TXT FILES
   Healthcare AI Intelligence Pipeline
 
+  NOTE: If 'claude-3-5-sonnet' is unavailable in your region, replace it with
+        'mistral-large2' or 'llama3.3-70b' in the AI_COMPLETE call below.
+
   Processes unprocessed TXT files from RAW.FILES_LOG using 8 AI functions:
     1. AI_PARSE_DOCUMENT  — read text content from TXT file (LAYOUT mode)
     2. AI_EXTRACT         — pull structured healthcare fields
