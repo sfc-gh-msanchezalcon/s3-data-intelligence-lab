@@ -45,7 +45,6 @@ S3 Bucket (pdfs/, txt/, audio/)
 - [ ] Cortex AI functions enabled in your region
 - [ ] AWS account with permissions to create S3 buckets, IAM roles, and event notifications
 - [ ] AWS CLI installed (`brew install awscli` on Mac, or use AWS Console)
-- [ ] Python 3.10+ with `boto3` installed (`pip install boto3`)
 
 ### Regional Note
 
@@ -364,19 +363,42 @@ SHOW PIPES IN SCHEMA RAW;
 
 **Duration:** 5 minutes
 
-### Generate and upload sample files
+### Upload the sample files to S3
 
-Run the Python script included in this repo:
+This repo includes 15 pre-made sample files in `sample_files/`. Upload them to your S3 bucket using the AWS CLI:
 
 ```bash
-# Set your AWS credentials and bucket name
-export AWS_DEFAULT_REGION=eu-central-1
-export S3_BUCKET_NAME="healthcare-ai-demo-<your-initials>"
+BUCKET_NAME="healthcare-ai-demo-<your-initials>"
 
-python generate_sample_data.py
+# Upload PDFs (6 files)
+aws s3 cp sample_files/clinical_notes_obrien.pdf s3://$BUCKET_NAME/healthcare/pdfs/
+aws s3 cp sample_files/discharge_summary_whitfield.pdf s3://$BUCKET_NAME/healthcare/pdfs/
+aws s3 cp sample_files/insurance_claim_brown.pdf s3://$BUCKET_NAME/healthcare/pdfs/
+aws s3 cp sample_files/lab_report_sullivan.pdf s3://$BUCKET_NAME/healthcare/pdfs/
+aws s3 cp sample_files/prescription_garcia.pdf s3://$BUCKET_NAME/healthcare/pdfs/
+aws s3 cp sample_files/radiology_report_park.pdf s3://$BUCKET_NAME/healthcare/pdfs/
+
+# Upload TXT files (4 files)
+aws s3 cp sample_files/nurse_notes_anderson.txt s3://$BUCKET_NAME/healthcare/txt/
+aws s3 cp sample_files/pathology_report_lee.txt s3://$BUCKET_NAME/healthcare/txt/
+aws s3 cp sample_files/patient_intake_torres.txt s3://$BUCKET_NAME/healthcare/txt/
+aws s3 cp sample_files/referral_letter_zhang.txt s3://$BUCKET_NAME/healthcare/txt/
+
+# Upload Audio files (5 files)
+aws s3 cp sample_files/consultation_garcia_cardiac.wav s3://$BUCKET_NAME/healthcare/audio/
+aws s3 cp sample_files/consultation_johnson_pediatric.mp3 s3://$BUCKET_NAME/healthcare/audio/
+aws s3 cp sample_files/consultation_obrien_therapy.wav s3://$BUCKET_NAME/healthcare/audio/
+aws s3 cp sample_files/consultation_tanaka_dermatology.mp3 s3://$BUCKET_NAME/healthcare/audio/
+aws s3 cp sample_files/consultation_whitfield_bp.wav s3://$BUCKET_NAME/healthcare/audio/
 ```
 
-This uploads 6 PDFs, 4 TXT files, and 5 WAV audio files.
+Or upload all at once:
+```bash
+aws s3 cp sample_files/ s3://$BUCKET_NAME/healthcare/ --recursive --exclude "*" \
+  --include "*.pdf" --include "*.txt" --include "*.wav" --include "*.mp3"
+```
+
+> **Alternative (no AWS CLI):** You can also upload files via the AWS Console: S3 → your bucket → navigate to the correct prefix folder → Upload.
 
 ### Trigger ingestion
 

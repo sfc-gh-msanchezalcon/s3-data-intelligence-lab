@@ -31,7 +31,7 @@ S3 Bucket (pdfs/, txt/, audio/)
 - Snowflake account with ACCOUNTADMIN role and Cortex AI functions enabled
 - AWS account with S3 access
 - Cross-region inference enabled (`CORTEX_ENABLED_CROSS_REGION = 'ANY_REGION'`)
-- Python 3.10+ with `boto3` (for sample file generation)
+- Python 3.10+ (optional, for custom sample file generation only)
 
 ## Regional Adaptation
 
