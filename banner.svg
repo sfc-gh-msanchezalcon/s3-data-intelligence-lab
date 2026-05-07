@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#29B5E8"/>
+      <stop offset="100%" style="stop-color:#1B73A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <circle cx="100" cy="50" r="4" fill="white" opacity="0.3"/>
+  <circle cx="250" cy="80" r="6" fill="white" opacity="0.2"/>
+  <circle cx="400" cy="30" r="3" fill="white" opacity="0.4"/>
+  <circle cx="550" cy="60" r="5" fill="white" opacity="0.25"/>
+  <circle cx="750" cy="40" r="4" fill="white" opacity="0.35"/>
+  <circle cx="900" cy="70" r="7" fill="white" opacity="0.2"/>
+  <circle cx="1050" cy="45" r="3" fill="white" opacity="0.3"/>
+  <circle cx="1100" cy="250" r="5" fill="white" opacity="0.2"/>
+  <circle cx="150" cy="260" r="6" fill="white" opacity="0.15"/>
+  <circle cx="350" cy="270" r="4" fill="white" opacity="0.25"/>
+  <circle cx="850" cy="260" r="5" fill="white" opacity="0.2"/>
+  <circle cx="1000" cy="280" r="3" fill="white" opacity="0.3"/>
+  <circle cx="50" cy="150" r="3" fill="white" opacity="0.2"/>
+  <circle cx="1150" cy="140" r="4" fill="white" opacity="0.25"/>
+  <text x="600" y="130" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">S3 Data Intelligence Lab</text>
+  <text x="600" y="185" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="white" text-anchor="middle" opacity="0.9">Cortex AI Functions • Search • Analyst • Agent</text>
+  <text x="600" y="250" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7DD3F0" text-anchor="middle">Snowflake Hands-On Lab</text>
+</svg>

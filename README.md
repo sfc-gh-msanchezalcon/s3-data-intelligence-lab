@@ -1,3 +1,5 @@
+![S3 Data Intelligence Lab](banner.svg)
+
 # AWS S3 Data Intelligence with Cortex AI Functions, Search, Analyst & Agents
 
 Hands-on lab: S3 file ingestion → 11 Cortex AI functions → Cortex Search → Cortex Analyst → Cortex Agent → Snowflake Intelligence.
