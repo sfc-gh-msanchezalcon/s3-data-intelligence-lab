@@ -4,7 +4,37 @@ This guide walks you through the AWS Console steps needed before running the lab
 
 ---
 
+## Step 0: Create a Snowflake Free Trial Account
+
+1. Go to [snowflake.com/en/data-cloud/platform/trial](https://signup.snowflake.com/)
+2. Fill in your name, email, and company
+3. Choose:
+   - **Cloud Provider:** AWS
+   - **Region:** EU (Frankfurt) — `eu-central-1`
+   - **Edition:** Enterprise (required for Cortex AI features)
+4. Click **Get Started**
+5. Check your email and click the activation link
+6. Set your username and password
+
+> **Important:** Select **AWS eu-central-1** so that your Snowflake account is in the same region as your S3 bucket. This avoids cross-region data transfer fees.
+
+Once logged in, you are automatically ACCOUNTADMIN — the role needed for this lab.
+
+### Enable Cross-Region Cortex AI (recommended)
+
+In a Snowsight worksheet, run:
+
+```sql
+ALTER ACCOUNT SET CORTEX_ENABLED_CROSS_REGION = 'ANY_REGION';
+```
+
+This ensures all Cortex AI models are available regardless of your account region.
+
+---
+
 ## Step A: Create an S3 Bucket
+
+> **No AWS account?** Create one at [aws.amazon.com/free](https://aws.amazon.com/free/). The free tier includes 5 GB of S3 storage — more than enough for this lab. You'll need a credit card for verification but won't be charged.
 
 1. Go to [AWS Console](https://console.aws.amazon.com/) and sign in
 2. Search for **S3** in the top search bar and click it
